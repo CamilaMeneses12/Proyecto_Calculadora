@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido — SENA</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main class="contenedor">
+        <div class="tarjeta">
+            <h1>¡Bienvenido!</h1>
+            <p class="subtitulo">
+                Hola, <strong id="nombreUsuario">...</strong> — Sesión iniciada correctamente
+            </p>
+
+            <!-- Ir a calculadora -->
+            <a href="calculadora.html" class="btn-principal">
+                🧮 Calculadora Científica
+            </a>
+
+            <!-- Ver usuarios registrados -->
+            <a href="listado.html" class="btn-principal">
+                👥 Ver Usuarios Registrados
+            </a>
+
+            <!-- Cerrar sesión -->
+            <button onclick="cerrarSesion()" class="btn-principal"
+                style="background:#dc3545; margin-top: 1.5rem;">
+                🚪 Cerrar Sesión
+            </button>
+        </div>
+    </main>
+
+    <script src="js/bienvenida.js"></script>
+</body>
+</html>

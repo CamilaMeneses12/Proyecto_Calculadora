@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios Registrados — SENA</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main class="contenedor listado-contenedor">
+        <div class="tarjeta">
+            <h1>Usuarios Registrados</h1>
+            <p class="subtitulo">Lista de todos los usuarios en la base de datos</p>
+
+            <div id="mensaje" class="mensaje"></div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Fecha de registro</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios">
+                    <tr>
+                        <td colspan="5" style="text-align:center; color:#6c757d;">
+                            Cargando usuarios...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="bienvenida.html" class="btn-volver">← Volver al inicio</a>
+        </div>
+    </main>
+
+    <script src="js/listado.js"></script>
+</body>
+</html>

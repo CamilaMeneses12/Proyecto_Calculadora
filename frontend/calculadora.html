@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica — SENA</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body>
+    <main class="contenedor calc-contenedor">
+        <div class="tarjeta">
+            <h1>Calculadora Científica</h1>
+            <p class="subtitulo">
+                Usuario: <strong id="nombreUsuario">...</strong>
+            </p>
+
+            <!-- ── Pantalla ── -->
+            <input type="text" id="pantalla" readonly placeholder="0">
+
+            <!-- ── Teclado ── -->
+            <div class="teclado">
+
+                <!-- Fila 1: funciones científicas -->
+                <button class="tecla fn" data-val="Math.sin(">sin</button>
+                <button class="tecla fn" data-val="Math.cos(">cos</button>
+                <button class="tecla fn" data-val="Math.tan(">tan</button>
+                <button class="tecla fn" data-val="Math.log10(">log</button>
+                <button class="tecla fn" data-val="Math.log(">ln</button>
+
+                <!-- Fila 2: funciones adicionales -->
+                <button class="tecla fn" data-val="Math.sqrt(">√</button>
+                <button class="tecla fn" data-val="**">x^y</button>
+                <button class="tecla fn" data-val="(">(</button>
+                <button class="tecla fn" data-val=")">)</button>
+                <button class="tecla fn" data-val="Math.PI">π</button>
+
+                <!-- Fila 3: 7 8 9 ÷ borrar -->
+                <button class="tecla" data-val="7">7</button>
+                <button class="tecla" data-val="8">8</button>
+                <button class="tecla" data-val="9">9</button>
+                <button class="tecla op" data-val="/">÷</button>
+                <button class="tecla borrar" id="btnBorrar">⌫</button>
+
+                <!-- Fila 4: 4 5 6 × limpiar -->
+                <button class="tecla" data-val="4">4</button>
+                <button class="tecla" data-val="5">5</button>
+                <button class="tecla" data-val="6">6</button>
+                <button class="tecla op" data-val="*">×</button>
+                <button class="tecla limpiar" id="btnLimpiar">C</button>
+
+                <!-- Fila 5: 1 2 3 − = -->
+                <button class="tecla" data-val="1">1</button>
+                <button class="tecla" data-val="2">2</button>
+                <button class="tecla" data-val="3">3</button>
+                <button class="tecla op" data-val="-">−</button>
+                <button class="tecla igual" id="btnIgual">=</button>
+
+                <!-- Fila 6: 0 . + -->
+                <button class="tecla cero" data-val="0">0</button>
+                <button class="tecla" data-val=".">.</button>
+                <button class="tecla op" data-val="+">+</button>
+
+            </div>
+
+            <!-- ── Botón Historial ── -->
+            <button id="btnHistorial" class="btn-historial">
+                📋 Ver Historial de Operaciones
+            </button>
+
+            <!-- ── Panel de historial (oculto por defecto) ── -->
+            <div id="panelHistorial" class="panel-historial" style="display:none;">
+                <h2 class="historial-titulo">📋 Historial de Operaciones</h2>
+                <ul id="listaHistorial" class="historial-lista">
+                    <li class="historial-vacio">Sin cálculos aún.</li>
+                </ul>
+                <button id="btnCerrarHistorial" class="btn-cerrar-historial">
+                    ✕ Cerrar historial
+                </button>
+            </div>
+
+            <a href="bienvenida.html" class="btn-volver" style="margin-top:1rem; display:inline-block;">
+                ← Volver al inicio
+            </a>
+        </div>
+    </main>
+
+    <script src="js/calculadora.js"></script>
+</body>
+</html>
